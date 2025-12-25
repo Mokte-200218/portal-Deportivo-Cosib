@@ -13,6 +13,14 @@ export const routes: Routes = [
     import('./IU/alumnos/alumnos.component')
       .then(m => m.AlumnosComponent),
 },
+{
+  path: 'atleta/:id',
+ 
+  loadComponent: () =>
+    import('./IU/atleta/atleta.component')
+      .then(m => m.AtletaComponent),
+},
+
 
   { path: '**', redirectTo: 'login' }
 ];
