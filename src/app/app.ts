@@ -4,6 +4,7 @@ import { AuthStateService } from './services/auth-state.service';
 import { AsyncPipe } from '@angular/common';
 
 
+
 @Component({
   standalone: true,
   selector: 'app-root',
@@ -15,6 +16,8 @@ export class App {
 
   protected readonly title = signal('portal-Deportivo-Cosib');
   private authState = inject(AuthStateService);
+  
+
   forbidden$ = this.authState.forbidden$;
 
 
